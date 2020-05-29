@@ -1,0 +1,22 @@
+2003-04-18  Kimura Fuyuki  <fuyuki@hadaly.org>
+
+	* configure.ac, psntpdate.c: merge the autoscan's result
+
+	* psntpdate.8: grammar
+
+2003-04-17  Kimura Fuyuki  <fuyuki@hadaly.org>
+
+	* configure.ac, psntpd.c, psntpdate.c: Use config.h.
+
+	* autogen.sh: Use autoreconf.
+
+	* sntp.h: Add missing #include <sys/time.h>
+
+	* psntpdate.c: Add missing #include <time.h>.
+
+	* configure.ac: Check for -lsocket.
+
+2003-04-16  Kimura Fuyuki  <fuyuki@hadaly.org>
+
+	* autogen.sh: New file.
+

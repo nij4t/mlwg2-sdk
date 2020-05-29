@@ -1,0 +1,5 @@
+
+mainmenu_option next_comment
+comment 'lighttpd'
+bool 'lighttpd'            CONFIG_USER_LIGHTTPD
+endmenu

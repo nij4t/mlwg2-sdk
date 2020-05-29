@@ -1,0 +1,11 @@
+WMTM-169N
+magic   "FIRMWARE"
+ver_inter       "v0.0.0.1"
+ver_outer       "0.0"
+model   "WMTM-169N"
+
+WMTM-171GN
+magic   "FIRMWARE"
+ver_inter       "v0.0.0.1"
+ver_outer       "0.0"
+model   "WMTM-171GN"

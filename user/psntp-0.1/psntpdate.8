@@ -1,0 +1,69 @@
+.\"
+.\" Copyright(C) 2003 by Kimura Fuyuki <fuyuki@hadaly.org>
+.\"
+.\" Permission is hereby granted, free of charge, to any person
+.\" obtaining a copy of this software and associated documentation
+.\" files (the "Software"), to deal in the Software without restriction,
+.\" including without limitation the rights to use, copy, modify,
+.\" merge, publish, distribute, sublicense, and/or sell copies of
+.\" the Software, and to permit persons to whom the Software is
+.\" furnished to do so, subject to the following conditions:
+.\"
+.\" The above copyright notice and this permission notice shall be
+.\" included in all copies or substantial portions of the Software.
+.\"
+.\" THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+.\" EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+.\" OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+.\" NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+.\" BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN
+.\" AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+.\" OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+.\" IN THE SOFTWARE.
+.\"
+.\"  $Id: psntpdate.8,v 1.2 2003/04/18 00:42:41 fuyuki Exp $
+.\"
+.Dd April 14, 2003
+.Dt PSNTPDATE 8
+.Sh NAME
+.Nm psntpdate
+.Nd Simple Network Time Protocol (SNTP) client
+.Sh SYNOPSIS
+.Nm
+.Op Fl 46afr
+.Ar server
+.Sh DESCRIPTION
+.Nm
+emits an SNTP (RFC 2030) query to the
+.Ar server
+and print the obtained time or set it to the system clock.
+.Pp
+The following options may be passed to
+.Nm :
+.Bl -tag -width indent
+.It Fl 4
+Forces
+.Nm
+to only use IPv4 addresses.
+.It Fl 6
+Forces
+.Nm
+to only use IPv6 addresses.
+.It Fl a
+Adjusts the system clock using adjtime(2).
+.It Fl f
+Forces the clock setting by the
+.Fl r
+option.
+.It Fl r
+Resets the system clock using settimeofday(2).
+.El
+.Sh SEE ALSO
+.Xr adjtime 2 ,
+.Xr settimeofday 2
+.Sh BUGS
+The
+.Fl f
+option combined with the
+.Fl a
+option is currently just ignored because of its troubling nature.

@@ -1,0 +1,179 @@
+#!/bin/sh
+
+RC_CONF=/tmp/rc.conf
+RESOLV_CONF="/etc/resolv.conf"
+
+# Get the enviro's
+wan_dhcp_mtu=`nvram get InternetMtu`
+dhcpc_dns1=`nvram get InternetDNS1`
+dhcpc_dns2=`nvram get InternetDNS2`
+dhcpc_gateway=`nvram get InternetDefaultGateway`
+#wan_dnsauto_enable=`nvram get DHCPSDNSRelayEnable`
+#Jayo 2010/01/14: for get hostname gave by dhcp server 
+#hostname=`nvram get DHCPCHostname`
+modelname=`nvram get ModelName`
+wan_check_flag=`nvram get WanCheckPhase`
+
+# udhcpc script edited by Tim Riker <Tim@Rikers.org>
+
+(test -z "$1" ) && echo "Error: should be called from udhcpc" && exit 1
+
+(test -n "$broadcast" ) && BROADCAST="broadcast $broadcast"
+(test -n "$subnet" ) && NETMASK="netmask $subnet"
+
+case "$1" in
+	deconfig|release)
+		/sbin/ifconfig $interface 0.0.0.0
+		echo "" > $RESOLV_CONF
+		#Clear status info in nvram
+		nvram set WanCurrentIP=""
+        	nvram set WanCurrentNetmask=""
+        	nvram set WanCurrentGateway=""
+        	nvram set WanCurrentDNS1=""
+        	nvram set WanCurrentDNS2=""
+        	nvram set WanCurrentDNS3=""
+        	nvram set WanCurrentMTU=""
+        	nvram set WanCurrentHostname=""
+        	nvram set WanCurrentDomainName=""
+        	nvram set WanCurrentDHCPLeaseStart=""
+        	nvram set WanCurrentDHCPLeaseEnd=""
+        	nvram set WanCurrentDHCPServ=""
+        	nvram set WanCurrentWINSServer=""
+		if [ "$1" = "release" ] ; then
+			route del default 
+			if [ "$wan_check_flag" == "0" ] ; then
+	               		/usr/sbin/gt_utils wan_service stop &
+			fi
+		fi
+		;;
+
+	renew|bound)
+		/sbin/ifconfig $interface mtu $wan_dhcp_mtu $ip $BROADCAST $NETMASK
+		echo "$wan_ip $hostname.$domain $hostname" > /etc/hosts
+		led 43 on
+
+		if [ "$dhcpc_gateway" = "" ] ; then
+			echo "DHCPC: Using default gateway from DHCP server:"
+			if test -n "$router" ; then
+				#echo "deleting routers"
+				#route del default
+				#while route del default gw 0.0.0.0 dev $interface ; do
+				#	:
+				#done
+
+				for i in $router ; do
+					echo "Gateway: $router"
+					route add default gw $i dev $interface
+				done
+			fi
+		else
+			echo "DHCPC: Using manual gateway $dhcpc_gateway:"
+			route add default gw $dhcpc_gateway dev $interface
+		fi
+
+		#if [ "$wan_dnsauto_enable" = "1" ] ; then
+		#if [ "$dhcpc_dns1" = "" ] && [ "$dhcpc_dns2" = "" ] ; then
+			echo -n > $RESOLV_CONF
+			if [ "$domain" = "" ] ; then
+				echo search $DOMAIN >> $RESOLV_CONF
+			else
+				echo search $domain >> $RESOLV_CONF
+			fi
+			if [ "$dhcpc_dns1" != "" ] ; then
+				echo adding dns $dhcpc_dns1
+                       		echo nameserver $dhcpc_dns1 >> $RESOLV_CONF
+			fi
+			if [ "$dhcpc_dns2" != "" ] ; then
+				echo adding dns $dhcpc_dns2
+                       		echo nameserver $dhcpc_dns2 >> $RESOLV_CONF
+			fi
+			index=1
+			for i in $dns ; do
+				#if [ "$i" != "$dhcpc_dns1" ] && [ "$i" != "$dhcpc_dns2" ] ; then
+					echo adding dns $i
+					echo nameserver $i >> $RESOLV_CONF
+					if [ "$index" = "1" ] ; then
+						nvram set WanCurrentDNS1=$i
+					fi
+					if [ "$index" = "2" ] ; then
+						nvram set WanCurrentDNS2=$i
+					fi
+					if [ "$index" = "3" ] ; then
+						nvram set WanCurrentDNS3=$i
+					fi
+					index=$(($index+1))
+				#fi
+			done
+		#else
+		# 	 echo -n > $RESOLV_CONF
+                #        if [ "$domain" = "" ] ; then
+                #                echo search $DOMAIN >> $RESOLV_CONF
+                #        else
+                #                echo search $domain >> $RESOLV_CONF
+                #        fi
+		#		echo adding dns $dhcpc_dns1
+                #       	echo nameserver $dhcpc_dns1 >> $RESOLV_CONF
+		#		nvram set WanCurrentDNS1=$dhcpc_dns1
+		#		echo adding dns $dhcpc_dns2
+                #       	echo nameserver $dhcpc_dns2 >> $RESOLV_CONF
+		#		nvram set WanCurrentDNS2=$dhcpc_dns2
+		#fi
+		
+		# Set Hostname & Domain name
+		if [ "$hostname" = "" ] ; then
+			if [ "$domain" = "" ] ; then
+                        	echo "$ip WCR-G300.localdomain WCR-G300" > /etc/hosts
+                        	/bin/hostname $hostname.localhost
+                        	nvram set WanCurrentDomainName=localdomain
+                	else
+                        	echo "$ip WCR-G300.$domain WCR-G300" > /etc/hosts
+                        	/bin/hostname WCR-G300.$domain
+                        	nvram set WanCurrentDomainName=$domain
+                	fi
+			nvram set WanCurrentHostname=""
+		else
+			if [ "$domain" = "" ] ; then
+				echo "$ip $hostname.localhost $hostname" > /etc/hosts
+				/bin/hostname $hostname.localhost
+        			nvram set WanCurrentDomainName=localdomain
+               		else
+				echo "$ip $hostname.$domain $hostname" > /etc/hosts
+				/bin/hostname $hostname.$domain
+        			nvram set WanCurrentDomainName=$domain
+                	fi
+			nvram set WanCurrentHostname=$hostname
+		fi
+		#echo "$ip mobilelitewireless mobilelitewireless" > /etc/hosts
+    #/bin/hostname mobilelitewireless
+    #nvram set WanCurrentDomainName=mobilelitewireless
+    echo "$ip mobilelite.home mobilelite.home" > /etc/hosts
+    /bin/hostname mobilelite.home
+    nvram set WanCurrentDomainName=mobilelite.home
+		# set Current info to nvram
+		nvram set WanCurrentIP=$ip
+        	nvram set WanCurrentNetmask=$subnet
+        	nvram set WanCurrentGateway=$router
+        	nvram set WanCurrentMTU=$wan_dhcp_mtu
+        	nvram set WanCurrentHostname=$hostname
+        	nvram set WanCurrentDHCPServ=$serverid
+		#Jayo 2009/08/28 : for recording WINS server in WAN
+        	nvram set WanCurrentWINSServer=$wins
+        	#nvram set WanCurrentDHCPLeaseStart=`date '+_M=%M;_H=%H;_m=%m;_d=%d;_y=%y'`
+        	#nvram set WanCurrentDHCPLeaseEnd=$lease
+		/usr/sbin/gt_utils dhcp_lease_time $lease	# save lease start/stop time to nvram
+##		if [ "$wan_check_flag" == "0" ] && [ "$1" != "renew" ] ; then
+##			/usr/sbin/gt_utils wan_service start &
+##		fi
+		# Jayo 2010/01/12 : for checking Wan/Lan network segment
+		/usr/sbin/checkWanLan &	
+##		/bin/widrive_aloha_wan &
+		sleep 1
+		/usr/shell/ntp.sh start &
+		if [ "`nvram get ethernet_wan`" == "0" ] ; then
+			auto_connect save &
+		fi
+		
+		;;
+esac
+
+exit 0

@@ -1,0 +1,14 @@
+#!/bin/sh
+CC=arm-linux-uclibc-gcc
+STRIP=arm-linux-uclibc-strip
+LDFLAGS=-lm
+export CC STRIP LDFLAGS
+PWD=`pwd`
+PREFIX=$PWD/../../target
+EXECPREFIX=$PWD/../../target/usr
+./configure \
+--build=arm-v5t_le-linux \
+--host=i686-pc-linux-gnu \
+--target=arm-linux-uclibc \
+--prefix=$PREFIX \
+--exec-prefix=$EXECPREFIX

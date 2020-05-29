@@ -1,0 +1,58 @@
+-*- outline -*-
+
+* What's this?
+
+This is an easy-to-use SNTP (RFC 2030) server/client which is suitable
+for a small LAN to synchronize the system clocks of each host.
+
+* Requirements
+
+- Basic Socket Interface Extensions for IPv6 (RFC 3493)
+- get/settimeofday(2), adjtime(2)
+
+* Quickstart
+
+** Client
+
+At first, obtain an estimated current time from your favorite NTP/SNTP
+server.  For example:
+
+	$ psntpdate time.nist.gov
+	Fri Apr 11 11:09:22 JST 2003
+
+If the time shown seems reasonable enough, set it to the system clock.
+
+	$ psntpdate -r time.nist.gov
+
+You may get an error if the system clock hasn't been calibrated yet.
+It could be forced by the -f option.
+
+	$ psntpdate -r -f time.nist.gov
+
+Then you need to adjust the system clock periodically by running
+"psntpdate -a" from cron.  Here's a sample crontab entry.
+
+	13	*	*	*	*	root	/usr/local/sbin/psntpdate -a time.nist.gov >/dev/null
+
+Note that "psntpdate -a" doesn't change the clock immediately; it's
+just an interface to the adjtime system call.  See adjtime(2) for
+details.
+
+** Server
+
+Add the following line to your /etc/inetd.conf.
+
+	ntp	dgram	udp	wait	root	/usr/local/libexec/psntpd	psntpd
+
+Or, if you want an IPv6 server:
+
+	ntp	dgram	udp6	wait	root	/usr/local/libexec/psntpd	psntpd
+
+And restart the inetd.
+
+	$ killall -HUP inetd
+
+* TODO
+
+No major functional changes, mostly bug fixes and portability
+improvements only.

@@ -1,0 +1,76 @@
+.text_button
+{
+    border:0;
+    text-align: left;
+    margin-left:11px;
+    padding: 12px 0px 0px 0px;
+    white-space:nowrap;
+    background-color:transparent;   
+    font-family:"Arial",Helvica,Sans-serif;
+    font-size:16px;
+    color:#ffffff;
+}
+
+.div_row_combo_right
+{
+    border:0;
+    position:relative;
+    width:200px; 
+    height:18px;
+    overflow:hidden;
+    top:13px;
+
+}
+
+.combobox_right
+{
+    border:0;
+    text-align: right;
+    position:absolute;
+    width:196px;
+    z-index:1;
+    top:-3px;
+    left:-3px;
+    font-family:"Arial",Helvica,Sans-serif;
+    font-size:16px;
+    color:#ffffff;
+    background-color:#424242;
+}
+
+.div_row_combo
+{
+    border:0;
+    position:relative;
+    width:270px; 
+    height:18px;
+    overflow:hidden;
+    top:13px;
+    left:17px;
+}
+
+.combobox_row
+{
+    border:0;
+    position:absolute;
+    top:-3px;
+    left:-3px;
+    width:274px; 
+    font-family:"Arial",Helvica,Sans-serif;
+    font-size:16px;
+    color:#ffffff;
+    background-color:#424242;   
+}
+
+.edit_normal
+{
+    border-width:1px;
+    border-color:#424242;
+    border-style:none;
+    top:10px;
+    position:relative;
+    font-family:"Arial",Helvica,Sans-serif;
+    font-size:16px;
+    color:#10b0ff;
+    background-color:transparent;   
+}
+

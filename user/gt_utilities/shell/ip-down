@@ -1,0 +1,35 @@
+#!/bin/sh
+#
+# This sample code shows you one way to modify your setup to allow automatic
+# configuration of your resolv.conf for peer supplied DNS addresses when using
+# the `usepeerdns' option.
+#
+# In my case I just added this to my /etc/ppp/ip-down.local script. You may need to 
+# create an executable script if one does not exist.
+#
+# Nick Walker (nickwalker@email.com)
+#
+
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
+#RC_CONF=/etc/init.d/rc.conf
+RESOLV_CONF=/etc/resolv.conf
+# include the enviro's
+#. $RC_CONF
+wan_check_flag=`nvram get WanCheckPhase`
+
+rm -f /tmp/ppp0_up_time
+#echo "" > $RESOLV_CONF
+if [ -n "$USEPEERDNS" ]; then
+nvram set WanCurrentIP=""
+nvram set WanCurrentNetmask=""
+nvram set WanCurrentGateway=""
+nvram set WanCurrentDNS1=""
+nvram set WanCurrentDNS2=""
+nvram set WanCurrentDNS3=""
+nvram set WanCurrentMTU=""
+nvram set WanCurrentHostname=""
+nvram set WanCurrentDomainName=""
+if [ "$wan_check_flag" == "0" ] ; then
+	/usr/sbin/gt_utils wan_service stop &
+fi
+fi

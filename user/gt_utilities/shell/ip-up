@@ -1,0 +1,79 @@
+#!/bin/sh
+#
+# This sample code shows you one way to modify your setup to allow automatic
+# configuration of your resolv.conf for peer supplied DNS addresses when using
+# the `usepeerdns' option.
+#
+# In my case I just added this to my /etc/ppp/ip-up.local script. You may need to 
+# create an executable script if one does not exist.
+#
+# Nick Walker (nickwalker@email.com)
+#
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin
+RESOLV_CONF=/etc/resolv.conf
+PPPoE1DNS1=`nvram get PPPoE1DNS1`
+PPPoE1DNS2=`nvram get PPPoE1DNS2`
+mtu=`nvram get PPPoE1MTU`
+hostname=`nvram get PPPoE1Hostname`
+domain=`nvram get PPPoE1Domain`
+model_name=`nvram get ModelName`
+wan_check_flag=`nvram get WanCheckPhase`
+
+# Keep the time of getting IP
+cat /proc/uptime > /tmp/ppp$UNIT_up_time
+
+if [ -n "$USEPEERDNS" ]; then
+	if [ ! -z "$PPPoE1DNS1" ] && [ ! -z "$PPPoE1DNS2" ] ; then
+		echo "$PPPoE1DNS1"; echo "nameserver $PPPoE1DNS1" > $RESOLV_CONF;
+		echo "$PPPoE1DNS2"; echo "nameserver $PPPoE1DNS2" >> $RESOLV_CONF;
+		[ ! -z "$DNS1" ] && ( echo "$DNS1"; echo "nameserver $DNS1" >> $RESOLV_CONF; nvram set WanCurrentDNS1=$DNS1 )
+	        [ ! -z "$DNS2" ] && ( echo "$DNS2"; echo "nameserver $DNS2" >> $RESOLV_CONF; nvram set WanCurrentDNS2=$DNS2 )	
+	else
+		if  [ ! -z "$PPPoE1DNS1" ] ; then
+			echo "$PPPoE1DNS1"; echo "nameserver $PPPoE1DNS1" > $RESOLV_CONF;
+			[ ! -z "$DNS1" ] && ( echo "$DNS1"; echo "nameserver $DNS1" >> $RESOLV_CONF; nvram set WanCurrentDNS1=$DNS1 )
+		        [ ! -z "$DNS2" ] && ( echo "$DNS2"; echo "nameserver $DNS2" >> $RESOLV_CONF; nvram set WanCurrentDNS2=$DNS2 )
+		else
+			[ ! -z "$DNS1" ] && ( echo "$DNS1"; echo "nameserver $DNS1" > $RESOLV_CONF; nvram set WanCurrentDNS1=$DNS1 )
+		        [ ! -z "$DNS2" ] && ( echo "$DNS2"; echo "nameserver $DNS2" >> $RESOLV_CONF; nvram set WanCurrentDNS2=$DNS2 )
+		fi
+	fi
+#else
+#	[ ! -z "$PPPoE1DNS1" ] && ( echo "$PPPoE1DNS1"; echo "nameserver $PPPoE1DNS1" > $RESOLV_CONF; nvram set WanCurrentDNS1=$PPPoE1DNS1 )
+#	[ ! -z "$PPPoE1DNS2" ] && ( echo "$PPPoE1DNS2"; echo "nameserver $PPPoE1DNS2" >> $RESOLV_CONF; nvram set WanCurrentDNS2=$PPPoE1DNS2 )	
+fi
+# Set Hostname & Domain name
+                if [ "$hostname" = "" ] ; then
+                        if [ "$domain" = "" ] ; then
+                                echo "$IPLOCAL $model_name.localdomain $model_name" > /etc/hosts
+                                /bin/hostname $hostname.localhost
+                                nvram set WanCurrentDomainName=localdomain
+                        else
+                                echo "$IPLOCAL $model_name.$domain $model_name" > /etc/hosts
+                                /bin/hostname WCR-G300.$domain
+                                nvram set WanCurrentDomainName=$domain
+                        fi
+			nvram set WanCurrentHostname=""
+                else
+                        if [ "$domain" = "" ] ; then
+                                echo "$IPLOCAL $hostname.localhost $hostname" > /etc/hosts
+                                /bin/hostname $hostname.localhost
+                                nvram set WanCurrentDomainName=localdomain
+                        else
+                                echo "$IPLOCAL $hostname.$domain $hostname" > /etc/hosts
+                                /bin/hostname $hostname.$domain
+                                nvram set WanCurrentDomainName=$domain
+                        fi
+			nvram set WanCurrentHostname=$hostname
+                fi
+
+# Set current info to nvram 
+nvram set WanCurrentIP=$IPLOCAL
+nvram set WanCurrentNetmask=255.255.255.255
+nvram set WanCurrentGateway=$IPREMOTE
+nvram set WanCurrentMTU=$mtu
+# Start WAN services
+if [ "$wan_check_flag" == "0" ] ; then
+	/usr/sbin/gt_utils wan_service start &
+fi
+

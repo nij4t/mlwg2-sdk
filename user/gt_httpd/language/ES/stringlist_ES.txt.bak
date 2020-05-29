@@ -1,0 +1,275 @@
+##0001
+系統重新啟動
+確定重新啟動系統嗎?
+是
+取消
+關閉系統
+確定要關閉系統嗎?
+回復出廠設定
+確定要回復出廠設定值嗎?
+網路名稱變更
+網路名稱
+是
+Sky Share
+網路磁碟名稱 : 
+密碼變更
+密碼 : 
+確定要關閉無線網路加密嗎?
+更新韌體
+確定要更新韌體嗎?
+系統
+重開機
+關機
+回復出廠設定
+網路名稱 : 
+變更
+網路磁碟名稱 : 
+Network Drive Disconnct
+韌體更新
+更新
+網路連線
+開啟
+關閉
+無線網路加密
+密碼變更
+SSID 格式不正確
+Network Drive Name is invalid.
+密碼設定不正確
+關閉無線網路加密
+韌體更新錯誤
+未發現有效之韌體
+連結至:
+語言設定
+確定回復舊版本嗎?
+##0002
+Sky Share
+系統重新啟動中……… 
+系統關閉中……… 
+韌體更新
+To continue setup, perform the following procedure.
+<li>Close all browser windows.</li>
+<li>Confirm that a connection between the computer and the router is established.</li>
+<li>Reopen the browser.</li>
+按此即關閉視窗
+韌體更新中，請勿關機。更新完成後系統將自動重開機。
+Please wait...
+Processing... Please wait...
+Wifi is Off Now...........
+Please wait...
+取消網路連線
+搜尋無線網路
+中文
+英文
+日文
+##0003
+韌體版本
+Firmware File's URL
+Start Firmware Upgrading
+##0004
+無線網路加密變更中……… 
+按此即關閉視窗
+##0005
+網路磁碟名稱變更中…… 
+按此即關閉視窗
+##0006
+網路名稱變更中……… 
+按此即關閉視窗
+##0007
+Home
+影片
+照片
+音樂
+文件
+設定
+說明
+##0008
+此為最上層
+請輸入檔案夾名稱
+Please select download file
+Only a file can to download
+請輸入要搜尋的名稱
+請選擇要上傳的檔案
+類型
+大小
+字母
+日期
+上載檔案
+選擇檔案
+新增資料夾
+資料夾名稱
+Does not support "\\/:\^\*\?\"<>|!()\$&"
+是
+取消
+選擇
+排序
+Upload file size error
+Android can only download one at a time archive 
+##0009
+名稱
+類型
+大小
+日期
+圖片無法播放
+資料夾
+##0010
+Can not open file
+名稱
+類型
+大小
+日期
+路徑
+找不到檔案
+圖片無法播放
+資料夾
+##0011
+SSID: 
+Authentication: 
+Encryption: 
+確認
+取消
+目前狀態
+Success
+連線中
+輸入密碼
+Failed exchange encryption key.
+Connection failed
+WiFi is Connecting Now...........
+Estimated time to restart is
+s. Please Wait...
+s. later, the page will display the result.
+WAN IP Address: 
+Refresh
+WEP encryption key
+WPA-PSK (Pre-shared key)
+WEP encryption key is invalid.
+WPA-PSK (Pre-shared key) is invalid.
+WPA4-PSK
+WPA-PSK
+TKIP/AES
+AES
+TKIP
+網路連線
+重新連線中
+秒
+請關閉視窗並確認連線狀態
+
+##0012
+Select AirStation (Master) to connect to.
+請選擇網路
+Select
+BSSID
+SSID
+Channel
+Signal
+Encryption
+Wireless mode
+Couldn't find Access Point that is available to communicate with.
+是
+Bad
+Weak
+Good
+Excellent
+&nbsp;Search&nbsp;again&nbsp;
+取消
+請選擇網路
+##0013
+Home
+影片
+照片
+音樂
+文件
+設定
+說明
+
+##0014
+Wi-Drive
+Back
+Done
+ON
+OFF
+Wi-Drive Settings
+Network Connections
+Upgrade Firmware
+
+##0015
+Wi-Drive Settings
+Device Name
+Visibility Status
+Wireless Channel
+Channel   1
+Channel   2
+Channel   3
+Channel   4
+Channel   5
+Channel   6
+Channel   7
+Channel   8
+Channel   9
+Channel  10
+Channel  11
+Security
+None
+WEP
+WPA
+WPA2
+WPA2 mixed
+Password
+Confirm<br />Password
+Please enter exactly 13 characters
+Please enter Device Name!
+Please enter exactly 13 characters for WEP!
+Passwords do not match, please enter again!
+Please enter minimum 8 characters for WPA/WPA2!
+Passwords do not match, please enter again!
+
+##0016
+Network Connection
+Auto-Scan
+Choose a Network...
+Password
+Chosse a file to upgrade firmware...
+IP Address 
+
+##0017
+Wait
+Please check Wi-Fi Connection
+Rebooting now! 
+Firmware Upgrade Error
+No valid firmware found!
+Are you sure to downgrade old firmware?
+Firmware Upgrade
+Firmware check fail!
+
+
+##0018
+Kingston Technology
+Configuraciones
+MobileLiteWireless
+Nombre
+Duración de la batería
+Firmware
+Actualización
+Conexión MobileLiteWireless
+Visibilidad
+Ocultar MobileLiteWireless de la lista de redes disponibles
+Mostrar MobileLiteWireless de la lista de redes disponibles
+Canal inalámbrico
+Seguridad
+NINGUNA
+WEP
+WPA
+WPA2
+Crear contraseña
+Confirmar contraseña
+¡Escriba el nombre del dispositivo!
+¡Escriba 13 caracteres exactamente para WEP!
+Las contraseñas no coinciden; ¡escríbalas de nuevo!
+¡Escriba 8 caracteres como mínimo para WPA/WPA2!
+Conexión de red
+Red inalámbrica
+Cerrar
+Cancelar 
+Guardar
+Digite la contraseña
+No se pueden reproducir imágenes.
+

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# place the commands to run after the pppd dial up successfully.
+
+led 43 off

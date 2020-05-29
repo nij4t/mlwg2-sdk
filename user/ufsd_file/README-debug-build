@@ -1,0 +1,14 @@
+Configure and build
+
+!!!!!!! fix paths COMPILER_PATH KERNEL_SOURCE_PATH KERNEL_BUILD_PATH !!!!!!!
+COMPILER_PATH - Path to gcc binarys
+KERNEL_SOURCE_PATH - Path to kernel sources
+KERNEL_BUILD_PATH - Path to kernel output, may be equals KERNEL_SOURCE_PATH
+
+( export COMPILER_PATH="" ; \
+export KERNEL_SOURCE_PATH="" ; \
+export KERNEL_BUILD_PATH="" ; \
+export COMPILER_NAME="mipsel-linux" ; \
+PATH="${COMPILER_PATH}:${PATH}" make ARCH="mips" CROSS_COMPILE=${COMPILER_NAME}- CROSSCOMPILE=${COMPILER_NAME}- TARGET="mips" CFLAGS="" clean ; \
+PATH="${COMPILER_PATH}:${PATH}" ./configure CFLAGS="-I$KERNEL_BUILD_PATH/arch/mips/include -I$KERNEL_BUILD_PATH/include -fno-strict-aliasing -fno-common -fno-delete-null-pointer-checks -ffunction-sections -mno-check-zero-division -mabi=32 -G 0 -mno-abicalls -fno-pic -msoft-float -ffreestanding -DCONFIG_MIPS_TC3262 -march=mips32r2 -I$KERNEL_BUILD_PATH/arch/mips/include/asm/mach-ralink -I$KERNEL_BUILD_PATH/arch/mips/include/asm/mach-generic -fomit-frame-pointer -mlong-calls  -O1" CC=${COMPILER_NAME}-gcc --target=mips --host=${COMPILER_NAME} --with-ks-dir=${KERNEL_SOURCE_PATH} --with-kb-dir=${KERNEL_BUILD_PATH}  --enable-ufsd-debug && \
+PATH="${COMPILER_PATH}:${PATH}"  make EXT_MODULE_FLAGS="-DUFSD_DISABLE_UGM -DUFSD_CHECK_BDI -DUFSD_TRACE" PACKAGE_TAG="lke_8.9.0_r225793_b93" ARCH="mips" CROSS_COMPILE=${COMPILER_NAME}- CROSSCOMPILE=${COMPILER_NAME}- TARGET="mips" CFLAGS="" driver )

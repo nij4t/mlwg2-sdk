@@ -1,0 +1,36 @@
+#!/bin/sh
+RC_CONF=/tmp/rc.conf
+RESOLV_CONF="/etc/resolv.conf"
+
+# udhcpc script edited by Tim Riker <Tim@Rikers.org>
+(test -z "$1" ) && echo "Error: should be called from udhcpc" && exit 1
+
+case "$1" in
+	deconfig|release)
+		nvram set WanCurrentIP=""
+                nvram set WanCurrentNetmask=""
+                nvram set WanCurrentGateway=""
+                nvram set WanCurrentDNS1=""
+                nvram set WanCurrentDNS2=""
+                nvram set WanCurrentDNS3=""
+                nvram set WanCurrentMTU=""
+                nvram set WanCurrentHostname=""
+                nvram set WanCurrentDomainName=""
+                nvram set WanCurrentDHCPLeaseStart=""
+                nvram set WanCurrentDHCPLeaseEnd=""
+                nvram set WanCurrentDHCPServ=""
+                nvram set WanCurrentWINSServer=""
+		;;
+
+	renew|bound)
+		nvram set WanCurrentIP=$ip
+                nvram set WanCurrentNetmask=$subnet
+                nvram set WanCurrentGateway=$router
+                nvram set WanCurrentMTU=$wan_dhcp_mtu
+                nvram set WanCurrentHostname=$hostname
+                nvram set WanCurrentDHCPServ=$serverid
+                nvram set WanCurrentWINSServer=$wins
+		;;
+esac
+
+exit 0

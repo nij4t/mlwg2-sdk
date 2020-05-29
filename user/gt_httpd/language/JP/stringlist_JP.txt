@@ -1,0 +1,184 @@
+##0001
+システム再起動
+システムを再起動しますか？
+はい
+キャンセル
+シャットダウン システム
+システムをシャットダウンしますか？
+初期設定に戻す
+初期設定に戻しますか？
+ネットワーク名の変更(SSID)
+ネットワーク名 (SSID)
+OK
+Sky Share
+ネットワークドライブ名 : 
+パスワード　変更
+パスワード : 
+無線のセキュリティを解除しますか？
+ファームウェア更新
+ファームウェアを更新しますか？
+システム
+再起動
+シャットダウン
+初期設定に戻す
+ネットワーク名 (SSID) : 
+変更
+ネットワークドライブ名 : 
+Network Drive Disconnct
+ファームウェア　アップグレード
+更新
+ネットワーク接続
+オン
+オフ
+無線セキュリティ
+パスワード　変更
+SSID 形式エラー
+Network Drive Name is invalid.
+パスワード設定エラー
+無線のセキュリティを解除します。
+ファームウェア　アップグレード エラー
+有効なファームウェアが見つかりません。
+接続:
+言語設定
+旧バージョンに戻しますか？
+##0002
+Sky Share
+システム再開中……… 
+システム　シャットダウン中……… 
+ファームウェア　アップグレード
+To continue setup, perform the following procedure.
+<li>Close all browser windows.</li>
+<li>Confirm that a connection between the computer and the router is established.</li>
+<li>Reopen the browser.</li>
+クリックすると、ウィンドウを閉じます。
+ファームウェア　アップグレード中。シャットダウンしないでください。完成すると、システムが自動的に再起動します。
+Please wait...
+Processing... Please wait...
+Wifi is Off Now...........
+Please wait...
+ネットワークの中断
+ネットワークの検索中
+中国語
+英語
+日本語
+##0003
+ファームウェア バージョン:
+Firmware File's URL
+Start Firmware Upgrading
+##0004
+無線セキュリティ変更中……… 
+クリックすると、ウィンドウを閉じます。
+##0005
+ネットワークドライブ名変更中……… 
+クリックすると、ウィンドウを閉じます。
+##0006
+ネットワーク名変更中……… 
+クリックすると、ウィンドウを閉じます。
+##0007
+Home
+ビデオ
+写真
+音楽
+文書
+設定
+ヘルプ
+##0008
+一番上のフォルダ
+フォルダ名を入力してください。
+Please select download file
+Only a file can to download
+検索名を入力してください。
+転送のファイルを選択してください。
+ファイル　タイプ
+ファイル　サイズ
+アルファベット
+日付
+ファイル転送
+ファイル選択
+フォルダ作成
+フォルダ名
+Does not support "\\/:\^\*\?\"<>|!()\$&"
+OK
+キャンセル
+選択
+分類
+Upload file size error
+Android can only download one at a time archive 
+##0009
+ファイル名
+ファイル　タイプ
+サイズ
+日付
+写真の再生ができません。
+フォルダ
+##0010
+Can not open file
+ファイル名
+ファイル　タイプ
+サイズ
+日付
+経路
+ファイルが見つかりません。
+写真の再生ができません。
+フォルダ
+##0011
+SSID: 
+Authentication: 
+Encryption: 
+確認
+キャンセル
+ステータス
+Success
+接続中
+パスワード入力
+Failed exchange encryption key.
+Connection failed
+WiFi is Connecting Now...........
+Estimated time to restart is
+s. Please Wait...
+s. later, the page will display the result.
+WAN IP Address: 
+Refresh
+WEP encryption key
+WPA-PSK (Pre-shared key)
+WEP encryption key is invalid.
+WPA-PSK (Pre-shared key) is invalid.
+WPA3-PSK
+WPA-PSK
+TKIP/AES
+AES
+TKIP
+ネットワーク接続
+再接続中
+秒
+ウィンドウを閉じて、接続の状況を確認してください。
+ 
+##0012
+Select AirStation (Master) to connect to.
+ネットワークを選択してください。
+Select
+BSSID
+SSID
+Channel
+Signal
+Encryption
+Wireless mode
+Couldn't find Access Point that is available to communicate with.
+はい
+Bad
+Weak
+Good
+Excellent
+&nbsp;Search&nbsp;again&nbsp;
+キャンセル
+ネットワークを選択してください。
+##0013
+Home
+ビデオ
+写真
+音楽
+文書
+設定
+ヘルプ
+Auto Shutdown
+Auto Connect SSID

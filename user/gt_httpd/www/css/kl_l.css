@@ -1,0 +1,119 @@
+body
+{
+    background-color:#303030;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+.div-content
+{
+    border:0;
+    width:480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dev-topleft
+{
+    border:0;
+    float:left;
+    width:120px;
+}
+
+.div-topright
+{
+    border: 0;
+    float:right;
+    width:120px;
+}
+
+.div-workspace
+{
+    border: 0;
+    top:60px;
+    width:460px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.image_normal
+{
+    border:0;
+}
+
+.text_normal
+{
+    font-family:"Times New Roman", Times, serif;
+    font-size:20pt;
+}
+
+.edit_normal
+{
+    font-family:"Times New Roman", Times, serif;
+    font-size:20pt;
+    width: 680px;
+}
+
+.button_center
+{
+    width:260px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color:#050;   
+    font: bold 84% "Times New Roman", Times, serif;
+    font-size:16pt;
+    background-color:#fed;   
+    border:1px solid;   
+    border-color: #696 #363 #363 #696;
+}
+
+.control_right
+{
+    float:right;
+    width:48px;
+    height:100%;
+}
+
+.list_left
+{
+    position:relative;
+    left:0;
+    top:0;
+    width:592;
+    height:100%;
+}
+
+.list_left1
+{
+    position:relative;
+    left:0;
+    top:13;
+    width:622;
+    height:100%;
+}
+
+.list_left2
+{
+    position:relative;
+    left:0;
+    top:0;
+    width:680;
+    height:100%;
+}
+
+.listbox
+{
+    width:100%;
+    font-family:"Times New Roman", Times, serif;
+    font-size:20pt;
+}
+
+.combobox
+{
+    width:100%;
+    font-family:"Times New Roman", Times, serif;
+    font-size:20pt;
+}

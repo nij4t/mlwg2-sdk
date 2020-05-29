@@ -1,0 +1,370 @@
+
+.FixedTitleRow  
+{  
+	position: relative;   
+	top: expression(this.offsetParent.scrollTop); 
+	//z-index: 10;   
+}  
+.fixedHeader
+{  
+
+	top: expression(document.getElementById("tableContainer").scrollTop) ;	  
+	font-family: Arial;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #FFF;
+	text-decoration: none;
+	text-align:center;
+}  
+
+
+
+.AutoSkip {
+	width:200px;
+	overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  font-family: Arial;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000;
+	text-decoration: none;
+	text-align:left;
+   }
+   
+.AutoSkip1 {
+	width:330px;
+	overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  font-family: Arial;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000;
+	text-decoration: none;
+	text-align:left;
+   }
+
+.AutoSkip {
+	width:200px;
+	overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  font-family: Arial;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000;
+	text-decoration: none;
+	text-align:left;
+   }
+   
+/* search file   */
+.AutoSkip2 {
+	width:350px;
+	overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  font-family: Arial;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000;
+	text-decoration: none;
+	text-align:left;
+   }
+
+.mb_AutoSkip {
+	width:100px;
+	overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  font-family: Arial;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000;
+	text-decoration: none;
+	text-align:left;
+   }
+
+
+a{
+   text-decoration: none !important;
+}
+	
+/* creat table word  */
+.word_01 {
+	font-family: Arial;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000;
+	text-decoration: none;
+	text-align:center;
+	word-break:break-all;
+	word-wrap: break-word; 
+	word-break: normal; 
+}
+.word_02 {
+	font-family: Arial;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000;
+	text-decoration: none;
+	text-align:left;
+}
+
+.word_white {
+	font-family: Arial;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #FFF;
+	text-decoration: none;
+	text-align:center;
+}
+
+.word_white1 {
+	font-family: Arial;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #FFF;
+	text-decoration: none;
+	text-align:left;
+}
+
+
+/* checkbox path*/
+.checkboxPath
+{
+	right:-3px;
+	top: 5px;
+	position:relative;
+	filter:Alpha(Opacity=0, FinishOpacity=0, Style=2); /* IE */
+	-moz-opacity:0; /* Moz + FF */
+	opacity:0; /* CSS3 */	
+	z-index: 8000;	
+}
+
+.scheckboxPath2
+{
+	right:-5px;
+	top:3px;
+	position:relative;
+	filter:Alpha(Opacity=0, FinishOpacity=0, Style=2); /* IE */
+	-moz-opacity:0; /* Moz + FF */
+	opacity:0; /* CSS3 */	
+	z-index: 8000;	
+}
+
+.checkboxPath2
+{
+	left:-10px;
+	top:2px;
+	position:relative;	
+}
+
+/* showMobile */
+.mb_checkboxPath
+{
+	right:-3px;
+	top: 5px;
+	position:relative;
+	filter:Alpha(Opacity=0, FinishOpacity=0, Style=2); /* IE */
+	-moz-opacity:0; /* Moz + FF */
+	opacity:0; /* CSS3 */	
+	z-index: 8000;	
+}
+
+.mb_checkboxPath2
+{
+	left:10px;
+	top:-7px;
+	position:relative;	
+}
+
+
+
+/* --- end --- */
+
+/* checkbox path*/
+.PcheckboxPath
+{
+	right:32px;
+	position:relative;
+	filter:Alpha(Opacity=0, FinishOpacity=0, Style=2); /* IE */
+	-moz-opacity:0; /* Moz + FF */
+	opacity:0; /* CSS3 */	
+	z-index: 8000;	
+}
+
+.PcheckboxPath2
+{
+	left:-46px;
+	position:relative;	
+	z-index: 1000;	
+}
+
+/* big image sort */
+
+.ImageList{
+	width:750px;
+	float:left;
+  overflow:hidden
+}
+
+/*一行四個*/
+.ImageList li{
+float:left;
+width:90px;
+height:90px;
+text-align:center;
+margin:5px;
+border:solid 0px #ebebeb;
+padding:0px;
+display:inline;
+}
+/*圖片顯示區域的大小，固定一下，以便文字對其*/
+.ImageList li .Image{
+position:relative;	
+height:75px;
+width:87px;
+display:block;
+border:0px;
+top:-20px;
+}
+
+
+#listimg2{
+position:relative;	
+height:75px;
+width:87px;
+display:block;
+border:0px;
+top:-20px;
+}
+
+/* showMobile */
+.mb_ImageList{
+	width:520px;
+	float:left;
+  overflow:hidden
+}
+
+/*一行四個*/
+.mb_ImageList li{
+float:left;
+width:90px;
+height:90px;
+text-align:center;
+margin:2px;
+border:solid 0px #ebebeb;
+padding:2px;
+display:inline;
+}
+/*圖片顯示區域的大小，固定一下，以便文字對其*/
+.mb_ImageList li .Image{
+position:relative;	
+height:75px;
+width:87px;
+display:block;
+border:0px;
+top:-20px;
+}
+/* --- end --- */
+
+#listimg{
+	height:75px;
+	width:87px;
+	border:0px;
+}
+
+.pictureBox {
+	border:2px solid #fff;
+	border-width:0 2px 2px;
+	width:800px;
+	height:400px;
+	float:left;
+    overflow:auto;
+}
+.pictureBox ul {
+	width:700px;
+	text-align:center;
+    list-style-type:none;
+}
+.pictureBox .rectype {/*20101229*/
+	margin:10px auto;
+}
+.pictureBox li {
+	float:left;
+	width:14%;
+	width:100px\9;
+	text-align:center;
+    margin-bottom:5px
+}
+.pictureBox img {
+	height:75px;
+	width:87px;
+	border:0px;
+}
+.pictureBox cite {
+	display:block;
+	/*font-size:93%;[>12px<]*/
+	/*color:#555;*/
+	padding:0 5px;
+/*	height:2.4em;*/
+	height:1.2em;
+/*	line-height:1.2em;*/
+	line-height:1.2em;
+	overflow:hidden;
+	_width:110px;/*20101231 ie6*/
+	/*font-family: Arial;*/
+    font-size: 12px;
+    font-style: normal;
+	/*line-height: normal;*/
+	/*font-weight: normal;*/
+	/*font-variant: normal;*/
+	/*text-transform: none;*/
+    color: #000;
+	/*text-decoration: none;*/
+	/*text-align:center;*/
+	/*word-break:break-all;*/
+	/*word-wrap: break-word; */
+	/*word-break: normal; */
+}

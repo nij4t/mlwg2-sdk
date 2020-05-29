@@ -1,0 +1,134 @@
+#!/bin/sh
+
+RC_CONF=/tmp/rc.conf
+RESOLV_CONF="/etc/resolv.conf"
+
+# Get the enviro's
+dhcpc_dns1=`nvram get BrDNS1`
+dhcpc_dns2=`nvram get BrDNS2`
+dhcpc_gateway=`nvram get BrDefaultGateway`
+br_ip=`nvram get BrLanIPAddr`
+br_netmask=`nvram get BrLanNetmask`
+#wan_dnsauto_enable=`nvram get DHCPSDNSRelayEnable`
+
+# udhcpc script edited by Tim Riker <Tim@Rikers.org>
+
+(test -z "$1" ) && echo "Error: should be called from udhcpc" && exit 1
+
+(test -n "$broadcast" ) && BROADCAST="broadcast $broadcast"
+(test -n "$subnet" ) && NETMASK="netmask $subnet"
+
+case "$1" in
+	deconfig|release)
+		nvram set WanCurrentIP="$br_ip"
+                nvram set WanCurrentNetmask="$br_netmask"
+                nvram set WanCurrentGateway=""
+                nvram set WanCurrentDNS1=""
+                nvram set WanCurrentDNS2=""
+                nvram set WanCurrentDNS3=""
+                nvram set WanCurrentMTU=""
+                nvram set WanCurrentHostname=""
+                nvram set WanCurrentDomainName=""
+                nvram set WanCurrentDHCPLeaseStart=""
+                nvram set WanCurrentDHCPLeaseEnd=""
+                nvram set WanCurrentDHCPServ=""
+                nvram set WanCurrentWINSServer=""
+		if [ "$1" = "release" ] ; then
+			nvram set WanCurrentIP=""
+                	nvram set WanCurrentNetmask=""
+			#/sbin/ifconfig $interface 0.0.0.0
+		else
+			gt_utils WPS_restart &
+		fi
+		/sbin/ifconfig $interface $br_ip
+		killall -SIGALRM httpd
+		echo "" > $RESOLV_CONF
+		;;
+
+	renew|bound)
+       		/usr/bin/killall -USR1 httpd    #Set USR1 signal to notify httpd to close socket after re-configure LAN interface
+		/sbin/ifconfig $interface $ip $BROADCAST $NETMASK
+
+		if [ "$dhcpc_gateway" = "" ] ; then
+			echo "DHCPC: Using default gateway from DHCP server:"
+			if test -n "$router" ; then
+				#echo "deleting routers"
+				#route del default
+				#while route del default gw 0.0.0.0 dev $interface ; do
+				#	:
+				#done
+
+				for i in $router ; do
+					echo "Gateway: $router"
+					route add default gw $i dev $interface
+				done
+			fi
+		else
+			echo "DHCPC: Using manual gateway $dhcpc_gateway:"
+			route add default gw $dhcpc_gateway dev $interface
+		fi
+
+		#if [ "$wan_dnsauto_enable" = "1" ] ; then
+		#if [ "$dhcpc_dns1" = "" ] && [ "$dhcpc_dns2" = "" ] ; then
+			echo -n > $RESOLV_CONF
+			if [ "$domain" = "" ] ; then
+				echo search $DOMAIN >> $RESOLV_CONF
+			else
+				echo search $domain >> $RESOLV_CONF
+                        	nvram set WanCurrentDomainName=$domain
+			fi
+			if [ "$dhcpc_dns1" != "" ] ; then
+				echo adding dns $dhcpc_dns1
+                       		echo nameserver $dhcpc_dns1 >> $RESOLV_CONF
+			fi
+			if [ "$dhcpc_dns2" != "" ] ; then
+				echo adding dns $dhcpc_dns2
+                       		echo nameserver $dhcpc_dns2 >> $RESOLV_CONF
+			fi
+			index=1
+			for i in $dns ; do
+				#if [ "$i" != "$dhcpc_dns1" ] && [ "$i" != "$dhcpc_dns2" ] ; then
+					echo adding dns $i
+					echo nameserver $i >> $RESOLV_CONF
+					if [ "$index" = "1" ] ; then
+	                                        nvram set WanCurrentDNS1=$i
+	                                fi
+	                                if [ "$index" = "2" ] ; then
+	                                        nvram set WanCurrentDNS2=$i
+	                                fi
+	                                if [ "$index" = "3" ] ; then
+	                                        nvram set WanCurrentDNS3=$i
+	                                fi
+	                                index=$(($index+1))
+				#fi
+			done
+		#else
+		#	echo -n > $RESOLV_CONF
+                #        if [ "$domain" = "" ] ; then
+                #                echo search $DOMAIN >> $RESOLV_CONF
+                #        else
+                #                echo search $domain >> $RESOLV_CONF
+                #        fi
+		#	echo adding dns $dhcpc_dns1
+                #      	echo nameserver $dhcpc_dns1 >> $RESOLV_CONF
+		#	nvram set WanCurrentDNS1=$dhcpc_dns1
+		#	echo adding dns $dhcpc_dns2
+                #      	echo nameserver $dhcpc_dns2 >> $RESOLV_CONF
+		#	nvram set WanCurrentDNS2=$dhcpc_dns2
+		#fi
+		
+		nvram set WanCurrentIP=$ip
+                nvram set WanCurrentNetmask=$subnet
+                nvram set WanCurrentGateway=$router
+                nvram set WanCurrentMTU=$wan_dhcp_mtu
+                nvram set WanCurrentHostname=$hostname
+                nvram set WanCurrentDHCPServ=$serverid
+                nvram set WanCurrentWINSServer=$wins
+		/usr/sbin/gt_utils dhcp_lease_time $lease	# save lease start/stop time to nvram
+		/usr/bin/killall -q -TERM ntp
+		/usr/sbin/ntp start &
+		/usr/sbin/gt_utils WPS_restart &   # restart WPS service
+		;;
+esac
+
+exit 0

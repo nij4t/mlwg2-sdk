@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* CSS Document */
+
+.bg {
+	background-image: url(bg.jpg);
+}
+.bg_01 {
+	background-image: url(bg_01.png);
+}
+.bg_02 {
+	background-image: url(left_bg.png);
+}
+.bg_03 {
+	background-image: url(images/Ui_main_01_r3_c3.jpg);
+}
+.big_04 {
+	background-image: url(images/Ui_main_01_r7_c6.jpg);
+}
+.big_05 {
+	background-image: url(images/Ui_main_01_r6_c6.jpg);
+}
+.big_06 {
+}
+
+.word_01 {
+	font-family: Arial;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000;
+	text-decoration: none;
+}
+.word_white {
+	font-family: Arial;
+	font-size: 13px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #FFF;
+	text-decoration: none;
+}
+.black {
+	background-image: url(images/Ui_q1_r1_c1.jpg);
+}
+.gary {
+	background-image: url(images/Ui_q1_r2_c1.jpg);
+}
+
+.big_06 {
+	background-image: url(images/bg.jpg);
+}
+
+.set_bg {
+	background-image: url(../images/bg.jpg);
+}
+.set_bg_little {
+	width:95%;
+	height:100%;
+	border:white 1px solid;
+	background-image: url(../images/bg_little.jpg);
+}
+
+.black_12 {
+	font-family: Arial;
+	font-size: 13px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000;
+	text-decoration: none;
+}
+.bg_01 {
+		
+	  background-image: url(../images/bg_01_all.png);
+	}
+	
+.but_class{
+	height: 30px;
+	font-weight: bold;
+	background-image: url(/images/setup/button.png);
+}
+
+.but_classOn{
+	height: 30px;
+	font-weight: bold;
+	background-image: url(../images/setup/button_on.png);	
+}
+
+#butdiv
+{
+	height: 30px;
+	width: 143px;
+}

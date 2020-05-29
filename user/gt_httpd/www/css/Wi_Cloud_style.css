@@ -1,0 +1,474 @@
+    .button_type { 
+	  width: 150px;
+	  height: 30px;
+	  font-weight: bold;
+	  background-image: url(../images/setup/button.png); 
+    }
+	.button_type_push { 
+	  width: 150px;
+	  height: 30px;
+	  font-weight: bold;
+	  background-image: url(../images/setup/button_on.png); 
+    }
+	.button_little { 
+	  width: 73px;
+	  height: 30px;
+	  font-weight: bold;
+	  background-image: url(../images/setup/button_little.png); 
+    }
+	.button_little_push { 
+	  width: 73px;
+	  height: 30px;
+	  font-weight: bold;
+	  color:black;
+	  background-image: url(../images/setup/button_little_on.png); 
+    }
+    
+    
+    
+	.button_pop { 
+	  width: 85px;
+	  height: 30px;
+	  font-weight: bold;
+	  background-image: url(../images/setup/button.png); 
+    }
+	.button_pop_push { 
+	  width: 85px;
+	  height: 30px;
+	  font-weight: bold;
+	  background-image: url(../images/setup/button_on.png); 
+    }
+	.button_close { 
+	  font-weight: bold;
+	  background-image: url(../images/setup/button.png); 
+    }
+	.button_close_push { 
+	  font-weight: bold;
+	  background-image: url(../images/setup/button_on.png); 
+    }
+	.bar { 
+	  background-image: url(../images/setup/bar.png); 
+    }
+	.setup_bg_title { 
+	  background-image: url(../images/setup/bg_little.jpg); 
+    }
+  
+  .setup_bg_title2 { 
+	  background-image: url(../images/setup/bg_little2.jpg); 
+    }  
+  
+	.setup_bg_body { 
+	  background-image: url(../images/setup/bg_little_body.jpg); 
+    }
+  .setup_bg_body2 { 
+	  background-image: url(../images/setup/bg_little_body2.jpg); 
+    }  
+  .setup_bg_body3 { 
+	  background-image: url(../images/setup/bg_little_body3.jpg); 
+    } 
+    
+	.setup_bg {
+	  background-image: url(../images/setup/setup_bk.jpg); 
+    }
+	.popup { 
+	  z-index: 2; 
+      position: absolute; 
+      top:100px; 
+      left:15%;
+      color:#FFFF00;
+      background-color:#DCDCDC;
+    }
+	.popup_2 { 
+	  z-index: 2; 
+      position: absolute; 
+      top:200px; 
+      left:15%;
+	  color:#FFFF00;
+      background-color:#DCDCDC;
+    }
+	.head {
+	  background-image: url(../images/setup/Ui_q1_r1_c1.jpg); 
+    }
+	.question {
+	  height:90px; 
+	  background-image: url(../images/setup/Ui_q1_r2_c1.jpg);
+    }
+	.bo_left {
+	  background-image: url(../images/Ui_main_01_r3_c3.jpg);
+	}
+	.bo_back {
+	  background-image: url(../images/bg_top.jpg);
+	  background-repeat: repeat;
+	}
+	.bo_back_bottom {
+	  background-image: url(../images/bg_bottom.jpg);
+	  background-repeat: repeat;
+	}
+	
+	.bg_01 {
+	  background-image: url(../images/bg_01_all.png);
+	}
+
+	table.AD_SET_WDS {
+	  border-collapse : separate;
+	  border-spacing  : 1px;
+	  border          : 0px none #000000;
+	  margin  : 0px 0px 8px 0px;
+	}
+
+	table.AD_SET_WDS th {
+	  font-size   : 15px;
+	  font-weight : 600;
+	  color       : #294887;
+	  text-align : center;
+	  background-color : #FFFFFF;
+	  padding : 2px 5px 2px 5px;
+	}
+
+	table.AD_SET_WDS td {
+	  font-size : 15px;
+	  font-weight : normal;
+	  color : #325174;
+	  text-align : center;
+	  padding : 2px 5px 2px 5px;
+	}
+	
+	
+	.button_file { 
+	  width: 236px;
+	  height: 50px;
+	  font-weight: bold;
+	  text-align : left;
+	  text-indent:27%;
+	  color : black;
+	  border:0px;
+	  background-image: url(../images/file_01.png); 
+		line-height:20px;
+		display:block;
+    } 
+  .button_file2 { 
+	  width: 236px;
+	  height: 50px;
+	  font-weight: bold;
+	  text-align : left;
+	  text-indent:27%;
+	  color : white;
+	  border:0px;
+	  background-image: url(../images/file_02.png); 
+		line-height:20px;
+		display:block;
+		
+		text-shadow: black 0.1em 0.1em 0.2em;
+		filter: shadow (color=black, strength=1);
+    }  
+    
+   .button_Video 
+   { 
+	  width: 236px;
+	  height: 50px;
+	  font-weight: bold;
+	  text-align : left;
+	  text-indent:27%;
+	  color : black;
+	  border:0px;
+	  background-image: url(../images/Video_01.png); 
+	  line-height:20px;
+		display:block;
+    } 
+    
+    .button_Video2
+    { 
+	  width: 236px;
+	  height: 50px;
+	  font-weight: bold;
+	  text-align : left;
+	  text-indent:27%;
+	  color : white;
+	  border:0px;
+	  background-image: url(../images/Video_02.png); 
+	  line-height:20px;
+		display:block;
+		text-shadow: black 0.1em 0.1em 0.2em;
+		filter: shadow (color=black, strength=1);
+    } 
+    
+    .button_Photos { 
+	  width: 236px;
+	  height: 50px;
+	  font-weight: bold;
+	  text-align : left;
+	  text-indent:27%;
+	  color : black;
+	  border:0px;
+	  background-image: url(../images/Photos_01.png); 
+	  line-height:20px;
+		display:block;
+    } 
+    
+    .button_Photos2
+    { 
+	  width: 236px;
+	  height: 50px;
+	  font-weight: bold;
+	  text-align : left;
+	  text-indent:27%;
+	  color : white;
+	  border:0px;
+	  background-image: url(../images/Photos_02.png); 
+	  line-height:20px;
+		display:block;
+		text-shadow: black 0.1em 0.1em 0.2em;
+		filter: shadow (color=black, strength=1);
+    } 
+    
+    .button_Music { 
+	  width: 236px;
+	  height: 50px;
+	  font-weight: bold;
+	  text-align : left;
+	  text-indent:27%;
+	  color : black;
+	  border:0px;
+	  background-image: url(../images/Music_01.png); 
+	  line-height:20px;
+		display:block;
+    } 
+    
+    .button_Music2 { 
+	  width: 236px;
+	  height: 50px;
+	  font-weight: bold;
+	  text-align : left;
+	  text-indent:27%;
+	  color : white;
+	  border:0px;
+	  background-image: url(../images/Music_02.png); 
+	  line-height:20px;
+		display:block;
+		text-shadow: black 0.1em 0.1em 0.2em;
+		filter: shadow (color=black, strength=1);
+    } 
+        
+    .button_Documents { 
+	  width: 236px;
+	  height: 50px;
+	  font-weight: bold;
+	  text-align : left;
+	  text-indent:27%;
+	  color : black;
+	  border:0px;
+	  background-image: url(../images/Documents_01.png); 
+	  line-height:20px;
+		display:block;
+    }
+    
+    .button_Documents2 { 
+	  width: 236px;
+	  height: 50px;
+	  font-weight: bold;
+	  text-align : left;
+	  text-indent:27%;
+	  color : white;
+	  border:0px;
+	  background-image: url(../images/Documents_02.png); 
+	  line-height:20px;
+		display:block;
+		text-shadow: black 0.1em 0.1em 0.2em;
+		filter: shadow (color=black, strength=1);
+    }
+    
+    .button_Setup { 
+	  width: 236px;
+	  height: 50px;
+	  font-weight: bold;
+	  text-align : left;
+	  text-indent:27%;
+	  color : black;
+	  border:0px;
+	  background-image: url(../images/Setup_01.png); 
+	  line-height:20px;
+		display:block;
+    }
+    
+    .button_Setup2 { 
+	  width: 236px;
+	  height: 50px;
+	  font-weight: bold;
+	  text-align : left;
+	  text-indent:27%;
+	  color : white;
+	  border:0px;
+	  background-image: url(../images/Setup_02.png); 
+	  line-height:25px;
+		display:block;
+		text-shadow: black 0.1em 0.1em 0.2em;
+		filter: dropshadow(color=gray, offx=3, offy=3, positive=1);
+		/*filter:progid:DXImageTransform.Microsoft.Shadow(color='black', Direction=135, Strength=3)*/
+	
+    }
+       
+    .button_Help { 
+	  width: 236px;
+	  height: 50px;
+	  font-weight: bold;
+	  text-align : left;
+	  text-indent:27%;
+	  color : black;
+	  border:0px;
+	  background-image: url(../images/Help_01.png); 
+	  line-height:20px;
+		display:block;
+    }
+    
+    .button_Help2 { 
+	  width: 236px;
+	  height: 50px;
+	  font-weight: bold;
+	  text-align : left;
+	  text-indent:27%;
+	  color : white;
+	  border:0px;
+	  background-image: url(../images/Help_02.png); 
+	  line-height:20px;
+		display:block;
+		text-shadow: black 0.1em 0.1em 0.2em;
+		filter: shadow (color=black, strength=1);
+    }
+   
+   #connectTo{
+   	position: relative; 
+   	left:13%;
+	  font-weight: bold;
+	  text-align : left;
+   	}
+   
+   #getConnect{
+   	position: relative; 
+   	left:8%;
+	  font-weight: bold;
+	  text-align : left;
+   	}
+   	
+   #getConnect2{
+   	position: relative; 
+   	left:8%;
+   	border:none;
+   	color:black;
+   	font-size:16px;
+   	font-weight: bold;
+   	background:none;   	
+   }
+   
+  .but_class{
+		height: 30px;
+		font-weight: bold;
+		background-image: url(/images/setup/button.png);
+	}
+	
+	.but_classOn{
+		height: 30px;
+		font-weight: bold;
+		background-image: url(../images/setup/button_on.png);	
+	}
+	
+	#butdiv
+	{
+		height: 30px;
+		width: 143px;
+	}
+	
+	.set_bg {
+		background-image: url(../images/bg.jpg);
+	}
+	.set_bg_little {
+		width:95%;
+		height:100%;
+		border:white 1px solid;
+		background-image: url(../images/bg_little.jpg);
+	}
+	.set_bg_little2 {
+		width:75%;
+		height:73px;
+		border:white 1px solid;
+		background-image: url(../images/bg_little2.jpg);
+	}
+	.set_bg_little3 {
+		width:654px;
+		height:60px;
+		border:white 1px solid;
+		background-image: url(../images/bg_little2.jpg);
+	}
+	
+	.black_12 {
+		font-family: Arial;
+		font-size: 14px;
+		font-style: normal;
+		line-height: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		color: #000;
+		text-decoration: none;
+	}
+	
+	#cd_t{
+		position:relative;
+		top:-30px;	
+	}
+	
+	/*
+	.id_div_chPwd{
+		position:relative;	
+		left:50%
+	}
+	.id_div_chPwd_mb{
+		position:relative;	
+		left:40%
+	}
+	
+	
+	#id_div_Wisecurity{
+		position:relative;	
+		left:15%		
+	}*/
+    .wifi_yes {
+	  background-image: url(/images/wifi_yes.png); 
+	  background-repeat: no-repeat;
+      background-position: center;
+      cursor:pointer;
+    }
+    .big_05 {
+        background-image: url(/images/Ui_main_01_r6_c6.jpg);
+        text-height: 20px;
+    }
+    .word_white {
+        font-family: Arial;
+        font-size: 23px;
+        font-style: normal;
+        line-height: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        color: #FFF;
+        text-decoration: none;
+        text-height: 20px;
+    }
+    .HandOver {
+      cursor:pointer;
+	  background-image: url(/images/wifi_yes.png); 
+	  background-repeat: no-repeat;
+      background-position: left;
+      cursor:pointer;
+      }
+
+	.test{
+		margin:0;
+		padding:0;
+		overflow:hidden;
+	}
+	
+	#Setmiddle{
+		margin:0;
+		padding:0;
+		overflow:hidden;
+	}

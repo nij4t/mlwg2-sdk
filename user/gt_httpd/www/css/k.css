@@ -1,0 +1,255 @@
+body
+{
+    background-color:#2e2e2e;
+    text-align: center;
+} 
+
+.div_content
+{
+    border:0;
+    width:320px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+.div_header
+{
+    border:0;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.div_header_text
+{
+    border:0;
+    left:20px;
+    top:4px; 
+    position:relative;
+    font-family:"Arial",Helvica,Sans-serif;
+    font-size:19px;
+    font-weight:bold;
+    color:#10b0ff;
+}
+
+.div_row
+{
+    border:0;
+    background-image:url('../images/en-us/iPad_Grey_ColorBar.png');
+    background-repeat:no-repeat;
+    width:302px;
+    height:45px;
+    margin-left: 0px;
+    text-align: left;
+    position:relative;
+}
+
+.div_row1
+{
+    border:0;
+    background-image:url('../images/en-us/iPad_Grey_ColorBar_Top.png');
+    background-repeat:no-repeat;
+    width:302px;
+    height:45px;
+    margin-left: 0px;
+    text-align: left;
+    position:relative;
+}
+
+.div_row2
+{
+    border:0;
+    background-image:url('../images/en-us/iPad_Grey_ColorBar_Btm.png');
+    background-repeat:no-repeat;
+    width:302px;
+    height:45px;
+    margin-left: 0px;
+    text-align: left;
+    position:relative;
+}
+
+.div_row3
+{
+    border:0;
+    background-image:url('../images/en-us/iPad_Grey_ColorBar_Mdl.png');
+    background-repeat:no-repeat;
+    width:302px;
+    height:45px;
+    margin-left: 0px;
+    text-align: left;
+    position:relative;
+}
+
+.div_row_text
+{
+    border:0;
+    float: left;
+    width:160px;
+    margin-left:11px;
+    padding: 12px 0px;
+    font-family:"Arial",Helvica,Sans-serif;
+    font-size:16px;
+    color:#ffffff;
+    white-space:nowrap;
+}
+
+.div_row_text2
+{
+    border:0;
+    float: left;
+    width:225px;
+    margin-left:11px;
+    padding: 12px 0px;
+    font-family:"Arial",Helvica,Sans-serif;
+    font-size:16px;
+    color:#ffffff;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    
+}
+
+.div_row_text_LR
+{
+    border:0;
+    position:relative;
+    width:300px;
+    text-align: right;
+    top:-15px;
+    font-family:"Arial",Helvica,Sans-serif;
+    font-size:14px;
+    color:#10b0ff;
+    white-space:nowrap;
+}
+
+.div_row_text_right
+{
+    border:0;
+    float: right;
+    width:160px;
+    margin-right:11px;
+    padding: 12px 0px;
+    font-family:"Arial",Helvica,Sans-serif;
+    font-size:16px;
+    color:#10b0ff;
+    text-align: right;
+    white-space:nowrap;
+}
+
+.div_row_image
+{
+    border:0;
+    padding: 9px 0px;
+}
+
+.div_spin_image
+{
+  position:relative;
+  top:0px;
+  text-align: right; 
+}
+
+.div_row_tag
+{
+    border:0;
+    text-align: left;
+    margin-left:11px;
+    font-family:"Arial",Helvica,Sans-serif;
+    font-size:16px;
+    font-weight:bold;
+    color:#10b0ff;
+}
+
+.image_middle
+{
+    border:0;
+    vertical-align:middle;
+    position:relative;
+    left:10px;
+}
+
+.image_middleN10
+{
+    border:0;
+    vertical-align:middle;
+    position:relative;
+    left:0px;
+}
+
+
+.text_button
+{
+    border:0;
+    text-align: left;
+    margin-left:11px;
+    padding: 12px 0px;
+    white-space:nowrap;
+    background-color:transparent;   
+    font-family:"Arial",Helvica,Sans-serif;
+    font-size:16px;
+    color:#ffffff;
+}
+
+.combobox_row
+{
+    border:0;
+    position:relative;
+    top:10px;
+    left:1px;
+    width:294px; 
+    font-family:"Arial",Helvica,Sans-serif;
+    font-size:16px;
+    color:#ffffff;
+    background-color:transparent;   
+}
+
+.div_combobox_text
+{
+    border:0;
+    text-align: right;
+    padding: 12px 0px;
+    width:180px; 
+    position:absolute;
+    white-space:nowrap;
+    background-color:transparent;
+    font-family:"Arial",Helvica,Sans-serif;
+    font-size:16px;
+    color:#10b0ff;
+}
+
+.div_bottom_text
+{
+    position:relative;
+    padding: 40px 0px;
+
+    text-align: center;
+    font-size:13px;
+    font-weight:bold;
+    font-family:"Arial",Helvica,Sans-serif;
+    color:#10b0ff;
+}
+
+#maskupgard
+{
+	
+	position:absolute;
+	background-color:transparent;
+	top:50px;
+	right:450px;
+	
+	width:400px;
+	height:120px; 
+	
+}
+
+a{
+   text-decoration: none !important;
+   
+   font-size:13px;
+   font-weight:bold;
+   font-family:"Arial",Helvica,Sans-serif;
+	 color: #ffffff;
+}
+
+

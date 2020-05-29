@@ -1,0 +1,277 @@
+##0001
+Restart System
+Are you sure to restart system?
+Yes
+Cancel
+Shutdown System
+Are you sure to shutdown system?
+Reset to Default
+Are you sure to reset to default?
+Change Network Name (SSID)
+Network Name (SSID) : 
+Ok
+Sky Share
+Network Drive Name : 
+Change Password
+Password : 
+Are you sure to disable wireless security?
+Update Firmware
+Are you sure to update firmware?
+System
+Restart
+Shutdown
+Reset to Default
+Network Name (SSID) : 
+Change
+Network Drive Name : 
+Network Drive Disconnct
+Firmware Upgrade
+Update
+Network connection
+ON
+OFF
+Wireless Security
+Change Password
+SSID is invalid.
+Network Drive Name is invalid.
+Password is invalid.
+Wireless security is disabled.
+Firmware Upgrade Error
+No valid firmware found!
+Connect to:  
+Language Setting
+Are you sure to downgrade old firmware?
+##0002
+Sky Share
+System is Restarting Now...........
+System is Shuting Down Now...........
+Firmware Upgrade
+To continue setup, perform the following procedure.
+<li>Close all browser windows.</li>
+<li>Confirm that a connection between the computer and the router is established.</li>
+<li>Reopen the browser.</li>
+Click to close this window
+Firmware is upgrading now, please don't turn device off!<br>System will reboot after finish!
+Please wait...
+Processing... Please wait...
+Wifi is Off Now...........
+Please wait...
+Disconnect network 
+Searching Network
+Chinese
+English
+Japanese
+##0003
+Firmware V
+Firmware File's URL
+Start Firmware Upgrading
+##0004
+Wireless Security Changing Now...........
+Click to close this window
+##0005
+Network Drive Name is Changing Now...........
+Click to close this window
+##0006
+Wireless Name is Changing Now...........
+Click to close this window
+##0007
+Home
+Video
+Photo
+Music
+Document
+Setup
+Help
+##0008
+It is top now
+Please enter folder name
+Please select download file
+Only a file can to download
+Enter search name in field
+Please select upload file
+File Type
+File Size
+Alphabet
+Date
+Upload  File
+Select File
+Create  Folder
+Folder Name
+Does not support "\\/:\^\*\?\"<>|!()\$&"
+OK
+Cancel
+Select
+Sort
+Upload file size error 
+Android can only download one at a time archive
+##0009
+Name
+Type
+Size
+Time
+No pictures can be played.
+Folder
+##0010
+Can not open file
+Name
+Type
+Size
+Time
+Path
+can not find any files
+No pictures can be played.
+Folder
+##0011
+SSID: 
+Authentication: 
+Encryption: 
+Confirm
+Cancel
+Status:
+Success
+Connecting
+Enter Password
+Failed exchange encryption key.
+Connection failed
+WiFi is Connecting Now...........
+Estimated time to restart is
+s. Please Wait...
+s. later, the page will display the result.
+WAN IP Address: 
+Refresh
+WEP encryption key
+WPA-PSK (Pre-shared key)
+WEP encryption key is invalid.
+WPA-PSK (Pre-shared key) is invalid.
+WPA2-PSK
+WPA-PSK
+TKIP/AES
+AES
+TKIP
+Network connection
+Re-connecting...
+sec
+Please close the window and check connection status. 
+
+##0012
+Select AirStation (Master) to connect to.
+Choose a Network
+Select
+BSSID
+SSID
+Channel
+Signal
+Encryption
+Wireless mode
+Couldn't find Access Point that is available to communicate with.
+YES
+Bad
+Weak
+Good
+Excellent
+&nbsp;Search&nbsp;again&nbsp;
+Cancel
+Choose a Network
+##0013
+Home
+Video
+Photo
+Music
+Document
+Setup
+Help
+
+##0014
+Wi-Drive
+Back
+Done
+ON
+OFF
+Wi-Drive Settings
+Network Connections
+Upgrade Firmware
+
+##0015
+Wi-Drive Settings
+Device Name
+Visibility Status
+Wireless Channel
+Channel   1
+Channel   2
+Channel   3
+Channel   4
+Channel   5
+Channel   6
+Channel   7
+Channel   8
+Channel   9
+Channel  10
+Channel  11
+Security
+None
+WEP
+WPA
+WPA2
+WPA2 mixed
+Password
+Confirm<br />Password
+Please enter exactly 13 characters
+Please enter Device Name!
+Please enter exactly 13 characters for WEP!
+Passwords do not match, please enter again!
+Please enter minimum 8 characters for WPA/WPA2!
+Passwords do not match, please enter again!
+
+##0016
+Network Connection
+Auto-Scan
+Choose a Network...
+Password
+Chosse a file to upgrade firmware...
+IP Address 
+
+##0017
+Wait
+Please check Wi-Fi Connection
+Rebooting now! 
+Firmware Upgrade Error
+No valid firmware found!
+Are you sure to downgrade old firmware?
+Firmware Upgrade
+Firmware check fail!
+
+
+##0018
+Kingston Technology
+Settings
+MobileLiteWireless
+Name
+Battery Life
+Firmware
+Upgrade
+MobileLiteWireless Connection
+Visibility
+Hide MobileLiteWireless from list of available networks
+Show MobileLiteWireless from list of available networks
+Wireless Channel
+Security
+NONE
+WEP
+WPA
+WPA2
+Create Password
+Confirm Password
+Please enter Device Name!
+Please enter exactly 13 characters for WEP!
+Passwords do not match, please enter again!
+Please enter minimum 8 characters for WPA2!
+Network Connection
+Wireless Network
+Close
+Cancel 
+Save
+Type Password
+No pictures can be played.
+WAN IP Address
+Auto Shutdown
+Auto Connect SSID

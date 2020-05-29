@@ -1,0 +1,20 @@
+[ v0.0.7.9 ] [date: 10/25/2010]
+1.Fixed BUG #20443 Web string error.
+M      language/string_DE.tar.bz2
+M      language/string_KO.tar.bz2
+M      language/string_IT.tar.bz2
+M      language/string_THAI_help.tar.bz2
+M      language/string_THAI_data.tar.bz2
+M      language/string_ZN_CH.tar.bz2
+M      language/string_ZN_TW.tar.bz2
+M      language/ENG/stringlist_ENG.txt
+M      language/string_ES.tar.bz2
+M      language/string_FR.tar.bz2
+A      GUILog
+
+[ v0.0.8.0 ] [date: 11/01/2010]
+1.Modified WPS release action (Need call WPS_Config(0)).
+M      GUILog
+M      httpd.c
+
+

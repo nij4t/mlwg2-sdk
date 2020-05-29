@@ -1,0 +1,35 @@
+Ralink AP SDK - History
+
+Version 4.1.0.0
+===============
+
+PLATFORM:
+
+- support MT7620 (linux-2.6.36.x)
+- support RT6855/RT6856 (linux-2.6.36MT.x)
+- support RT3052/RT3883/RT3352/RT5350 (linux-2.6.21.x)
+
+NEW FUNCTIONS:
+
+- [Eth] [RT6856/MT7620] support TSO/LRO
+- [GUI] Hotspot GUI support
+- [GUI] 11AC GUI support
+- [UPnP] miniupnpd replaces upnpd and wscd
+
+IMPROVEMENT:
+
+- [HWNAT] change LAN/WAN VID by hw_nat command                                  
+- [SW] RT6856 switch table support MLD snooping 
+- [PPTP/L2TP] performance enhancement
+- [PCIe] Support PCIe Device on PCIe slot 1 but PCIe slot 0 floating 
+
+Bug fixed:
+
+- [Eth] CDMA checksum offload fail for IP fragment packets                    
+- [Busybox] first command failed after Ctrl-C
+- [IPv6] IPv6 Multicast Streaming data corrupts on WiFI interface
+- [I2S] Add DMA stop handling for last DMA 
+- [PCM] [RT6856] Add SPI CTRL for SLIC example
+
+
+

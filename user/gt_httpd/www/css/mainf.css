@@ -1,0 +1,326 @@
+
+
+/* search */
+
+#golevelP
+{
+	position:absolute;
+	top:0px;
+	left:-400px;	
+}
+
+#searchtext
+{
+	height:28px;
+	width:518px;	
+}
+
+/* showMobile */
+#searchtext2
+{
+	height:28px;
+	width:272px;	
+}
+
+#Mobile_sort_list
+{	
+	position:absolute;
+	top:30px;
+	left:447px;	
+}
+
+/* --- end --- */
+
+#textP
+{
+	position:absolute;
+	top : -5px;
+	left:45px;		
+}
+
+#sort_list
+{	
+	position:absolute;
+	top:30px;
+	left:700px;	
+}
+/* show picture mask */
+
+#pictureShow{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 9500; 
+}
+
+#pictureShowMake{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: Black;
+	overflow: hidden;
+	z-index: 9000; 
+	filter:Alpha(Opacity=80, FinishOpacity=80, Style=2); /* IE */
+	-moz-opacity:0.8; /* Moz + FF */
+	opacity:0.8; /* CSS3 */
+}
+
+#showPicImage2 {
+	margin: 0 auto;
+	max-width:450px;
+	max-height:360px;
+		
+	width:expression(this.width>450 ? 450:true);
+	height:expression(this.height>360 ? 360:true);	
+	overflow:hidden; /* 超出的部分隱藏，避免控制圖片大小失敗而引起的撐開變形*/
+	
+	/*
+	width:expression(this.width>500 ? 500:true);
+	height:expression(this.height>500 ? 500:true);
+	height:expression(this.height>500?\"500px\":height \"px\");
+	width:expression(this.width>500?\"500px\":width \"px\");*/
+	
+} 
+
+#showPicImage {
+	position: relative;	
+	left: 0px;
+	margin: 0 auto;
+    border:1;
+	max-width:600px;
+	max-height:350px;
+		
+	/*width:expression(this.width>600 ? 600:true);*/
+    /*width:expression(this.width>600&&this.width>this.height ? 600:this.width);*/
+    /*height:expression(this.height>350 ? 350:this.height);	*/
+	overflow:hidden; /* 超出的部分隱藏，避免控制圖片大小失敗而引起的撐開變形*/
+	
+	
+	/*
+	width:expression(this.width>500 ? 500:true);
+	height:expression(this.height>500 ? 500:true);
+	height:expression(this.height>500?\"500px\":height \"px\");
+	width:expression(this.width>500?\"500px\":width \"px\");*/
+	
+} 
+#pictureShow2{
+	position: relative;	
+	top: 10px;	
+}
+
+/* chanel and selected */
+
+span.menu_sort1{
+	position: relative;	
+	left: 5px;
+}
+
+span.menu_sort2{
+	position: relative;	
+	left: 5px;
+}
+span.menu_sort3{
+	position: relative;	
+	left: 8px;
+}
+span.menu_sort4{
+	position: relative;	
+	left: 13px;
+}
+
+
+/*upload list*/
+.UploadList2{
+	position: absolute;
+	top: 80px;
+	left: 100px;
+	width: 380px;
+	height: 130px;
+	
+	z-index: 9500; 
+}
+
+/* mask upload and create folder in search_file.html*/
+#searchMask{
+	position: absolute;	
+	top: 393px;
+	left: 7px;
+	width: 80px;
+	height: 27px;
+	background-color: black;
+
+	filter:Alpha(Opacity=20, FinishOpacity=20, Style=2); /* IE */
+	-moz-opacity:0.2; /* Moz + FF */
+	opacity:0.2; /* CSS3 */	
+	z-index: 100; 
+}
+
+/*download*/
+div.dowloadMask{
+	position: relative;
+	top: -57px;
+	left: 4px;
+	width: 45px;
+	height: 31px;
+	background-color: Black;
+	z-index: 5; 
+	filter:Alpha(Opacity=20, FinishOpacity=20, Style=2); /* IE */
+	-moz-opacity:0.2; /* Moz + FF */
+	opacity:0.2; /* CSS3 */
+}
+
+/*creat folder*/
+.bg {
+	background-image: url(bg.jpg);
+}
+.bg_01 {
+	background-image: url(bg_01.png);
+}
+.bg_02 {
+	background-image: url(left_bg.png);
+}
+.bg_03 {
+	background-image: url(/images/Ui_main_01_r3_c3.jpg);
+}
+.big_04 {
+	background-image: url(/images/Ui_main_01_r7_c6.jpg);
+}
+.big_05 {
+	background-image: url(/images/Ui_main_01_r6_c6.jpg);
+}
+.big_06 {
+}
+
+.word_01 {
+	font-family: Arial;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #000;
+	text-decoration: none;
+}
+.word_white {
+	font-family: Arial;
+	font-size: 12px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	color: #FFF;
+	text-decoration: none;
+}
+.black {
+	background-image: url(/images/Ui_q1_r1_c1.jpg);
+}
+.gary {
+	background-image: url(/images/Ui_q1_r2_c1.jpg);
+}
+
+.big_06 {
+	background-image: url(/images/bg.jpg);
+}
+
+/* loading */
+#loading {
+	width: 200px;
+	height: 100px;
+	position: absolute;
+	left: 23%;
+	top: 20%;
+	text-align: center;
+}
+
+div.folderMask
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9000; 	
+	background-color: Black;	
+	filter:Alpha(Opacity=0, FinishOpacity=0, Style=2); /* IE */
+	-moz-opacity:0; /* Moz + FF */
+	opacity:0; /* CSS3 */
+}
+
+#folderText
+{
+	width: 282px;
+	height: 24px;
+	z-index: 9600;		
+}
+
+/*creat folder*/
+.creatFolder2{
+	position: absolute;
+	top: 55px;
+	left: 100px;
+	width: 200px;
+	height: 200px;
+	z-index: 9500; 
+}
+
+/*open file mark*/
+#openfileMark{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 836px;
+	height: 450px;
+	background-image: url(/images/bg_01_all.png);
+	z-index: 9600; 
+}
+
+/* mb_upload file */
+#showSelectName {
+	position: absolute;
+	width:200px;
+	height: 30px;
+	top: 125px;
+	left: 310px;
+	
+	background-image: url(/images/mb_bg.jpg);
+	z-index: 9600; 
+ }
+#showSelecttext{
+	background-color:transparent; 	
+ 	border:0px;
+}
+ 
+.button_class
+{
+	width:90px;
+	height:29px;
+	border:0px;			
+	font-weight: bold;
+	background-image: url(/images/ok_01.png);
+}
+
+.btn_menu
+{	
+	width:103px;
+	height:27px;
+	border:0px;			
+	font-weight: bold;
+	background-image: url(/images/menu_1.jpg);
+}
+
+.btn_sortlist
+{
+	width:103px;
+	height:27px;
+	border:0px;			
+	font-weight: bold;
+	font-size: 11px;
+	background-image: url(/images/sort_1.jpg);
+}

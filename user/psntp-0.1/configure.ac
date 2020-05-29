@@ -1,0 +1,17 @@
+AC_INIT(psntp, 0.1, fuyuki@hadaly.org)
+AC_CONFIG_SRCDIR(sntp.c)
+AM_INIT_AUTOMAKE(psntp, 0.1)
+AM_CONFIG_HEADER(config.h)
+
+AC_PROG_CC
+AC_PROG_INSTALL
+
+AC_HEADER_STDC
+
+AC_C_CONST
+AC_HEADER_TIME
+
+AC_FUNC_STRFTIME
+AC_CHECK_LIB(socket, socket, [LIBS="$LIBS -lsocket"])
+
+AC_OUTPUT(Makefile)
